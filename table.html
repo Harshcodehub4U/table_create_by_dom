@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Example</title>
+</head>
+<body>
+    <button onclick="add()">click</button>
+    <script>
+        
+        let table = document.createElement('table');
+        table.style.border = "2px solid"
+        table.style.borderCollapse = "collapse"
+      
+        let headerRow = document.createElement('tr');
+        headerRow.style.border = "2px solid"
+        let th1 = document.createElement('th');
+        th1.style.border = "2px solid"
+        th1.textContent = 'Column 1';
+        let th2 = document.createElement('th');
+        th2.style.border = "2px solid"
+        th2.textContent = 'Column 2';
+        let th3 = document.createElement('th');
+        th3.style.border = "2px solid"
+        th3.textContent = 'Column 3';
+        let th4 = document.createElement('th');
+        th4.style.border = "2px solid"
+        th4.textContent = 'Column 4';
+        
+
+        headerRow.appendChild(th1);
+        headerRow.appendChild(th2);
+        headerRow.appendChild(th3);
+        headerRow.appendChild(th4);
+
+        
+        table.appendChild(headerRow);
+
+
+        document.body.appendChild(table);
+
+  
+    
+        
+      
+          function add(){
+
+              const newRow = document.createElement('tr');
+              
+              
+              const td1 = document.createElement('td');
+              td1.style.border = "2px solid"
+              td1.textContent = 'Data 1';
+            const td2 = document.createElement('td');
+            td2.style.border = "2px solid"
+            td2.textContent = 'Data 2';
+            const td3 = document.createElement('td');
+            td3.style.border = "2px solid"
+            td3.textContent = 'Data 3';
+            const td4 = document.createElement('td');
+            td4.style.border = "2px solid"
+            td4.textContent = 'Data 4';
+            
+            
+            newRow.appendChild(td1);
+            newRow.appendChild(td2);
+            newRow.appendChild(td3);
+            newRow.appendChild(td4);
+            
+            
+            table.appendChild(newRow);
+            
+        }
+    </script>
+</body>
+</html>
